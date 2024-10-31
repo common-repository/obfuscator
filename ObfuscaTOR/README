@@ -1,0 +1,37 @@
+ObfuscaTOR beta
+~~~~~~~~~~~~~~~
+ryanday2@gmail.com
+http://ryanday.net/
+http://github.com/rday/ObfuscaTOR/
+
+
+The intended goal of this library is to allow easy development of social media plugins
+to display Tor bridge information to the mass public without computers being able to easily 
+record and filter those bridge addresses.
+
+
+I keep using the term 'CAPTCHA' to describe this, which I understand is incorrect.
+I'm not challenging anyone to solve a test, and this has nothing to do with authentication.
+The term 'CAPTCHA' is, however, recognized as 'Those pictures with letters that computers
+aren't supposed to be able to read'. That is why I am using it. Also, all the graphics
+rendering I've taken from Captcha libraries. Maybe we'll think of something more correct later.
+
+
+I've taken from the Easy Captcha library and the PHP Captcha libraries for all the
+algorithms. I've made a few modifications to allow for linebreaks and to remove some
+of the things not needed for this implementation. Other then that, all the credit really
+goes to the developers of those libraries.
+
+What I've added is the interface and captcha factory in an effort to make it easy to
+extend this system. Please see index.php for example usages.
+
+
+FAQ:
+
+Q: Why are there fonts included?
+A: Well it turns out people have the audacity to keep their fonts in directories that don't line
+up with mine. Also webhosts seem to mix up what they feel like doing. 
+Anyways, heres the thing; This is meant to be just a library, and having a configurable font
+directory is going to be the responsibility of the user of the library. I'll remove this after
+more of the bugs are worked out and the font path is able to be passed into the classes. Until then
+it is just more portable to include known working fonts(because sizes do matter here) in a known location.
